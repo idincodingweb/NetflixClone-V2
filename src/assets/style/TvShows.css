@@ -1,0 +1,26 @@
+/* Container styling */
+.custom-tvshows-container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Title styling */
+.custom-tvshows-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-tvshows-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-tvshows-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,180 @@
+/* Reset CSS untuk menghilangkan padding dan margin default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.trending-now {
+  padding: 20px;
+  max-width: 1200px; /* Set maximum width for the content */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.trending-now-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trending-icon {
+  color: #ff611c;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.trending-icon-arrow {
+  font-size: 32px; /* Increase the size of the icon */
+  margin-right: 10px;
+}
+
+.trending-icon span {
+  font-size: 1.5rem; /* Increase the size of the text */
+}
+
+.trending-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trending-nav-item {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.trending-nav-item i {
+  margin-right: 5px;
+}
+
+.trending-nav-item.active {
+  font-weight: bold;
+}
+
+.fas {
+  color: #ff611c;
+}
+
+.trending-divider {
+  border: none;
+  border-top: 2px solid white;
+  margin: 20px 0;
+}
+
+.trending-categories {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.trending-category-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.trending-categories-scroll-icon {
+  font-size: 24px;
+}
+
+.trending-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+.trending-card {
+  flex: 0 0 22%; /* Adjust width to fit 4 cards in a row */
+  max-width: 22%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.trending-card-image {
+  width: 100%;
+  height: auto;
+}
+
+.trending-card-info {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trending-card-year {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.trending-card-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.trending-love-icon, .trending-eye-icon, .trending-star-icon {
+  font-size: 24px;
+}
+
+.trending-love-icon {
+  color: red;
+}
+
+.trending-eye-icon {
+  color: #ff6927;
+}
+
+.trending-star-icon {
+  color: yellow;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .trending-card {
+    flex: 0 0 45%; /* Two cards per row on tablets */
+    max-width: 45%;
+  }
+
+  .trending-nav {
+    gap: 10px;
+  }
+
+  .trending-category-button {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-card {
+    flex: 0 0 90%; /* One card per row on mobile */
+    max-width: 90%;
+  }
+
+  .trending-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trending-category-button {
+    padding: 5px 10px;
+  }
+}

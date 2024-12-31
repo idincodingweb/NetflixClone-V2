@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, black, red); /* Gradien linear merah ke hitam */
+  color: white;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Mengatur default margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mengatur warna teks */
+h1, h2, h3, h4, h5, h6 {
+  color: #ff4b5c; /* Mengatur warna judul */
+}
+
+p, a, span {
+  color: white; /* Mengatur warna teks umum */
+}
+
+/* Mengatur gaya untuk link */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff4b5c;
+}
+
+/* Mengatur gaya untuk tombol */
+button {
+  background-color: rgba(51, 51, 51, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4b5c;
+}
+
+/* Mengatur gaya untuk footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff4b5c;
+}

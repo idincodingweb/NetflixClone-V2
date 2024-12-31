@@ -1,0 +1,147 @@
+.about-container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  background-color: #222222c3;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.profile-text {
+  padding: 10px;
+}
+
+.team-section, .frameworks-section, .contact-section {
+  margin-bottom: 40px;
+}
+
+.team-section h2, .frameworks-section h2, .contact-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-grid, .frameworks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-card, .framework-card {
+  background-color: #222222aa;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: calc(25% - 20px);
+}
+
+.team-card img, .framework-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.contact-card {
+  display: flex;
+  background-color: #222222c3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contact-form {
+  padding: 20px;
+  width: 50%;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    margin: 10px 0;
+  }
+
+  .team-card, .framework-card {
+    width: calc(50% - 20px);
+  }
+
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-image, .contact-form {
+    width: 100%;
+  }
+
+  .contact-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card, .framework-card {
+    width: 100%;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card img, .framework-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-image {
+    height: 150px;
+  }
+}

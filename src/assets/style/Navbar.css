@@ -1,0 +1,198 @@
+/* Mengatur gaya untuk navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Mengatur bagian kiri navbar */
+.navbar-left {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 10px; /* Memberikan jarak antar logo dan menu */
+}
+
+/* Mengatur logo Netflix */
+.navbar-logo {
+  width: 150px; /* Perbesar ukuran logo */
+  height: auto;
+}
+
+/* Mengatur menu navbar */
+.navbar-menu {
+  margin: 15px;
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Memberikan jarak antar item menu */
+  padding: 15px 0; /* Tambahkan padding atas dan bawah untuk memberi jarak dari atas */
+  align-items: center; /* Pastikan item menu sejajar vertikal */
+}
+
+.navbar-menu li {
+  align-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li:hover {
+  color: #ff4b5c; /* Warna merah saat hover */
+}
+
+/* Mengatur bagian kanan navbar */
+.navbar-right {
+  margin: 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 20px; /* Memberikan jarak antar ikon */
+}
+
+.navbar-right.open {
+  display: flex;
+}
+
+/* Mengatur ikon navbar */
+.navbar-icon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-icon:hover {
+  color: #ff4b5c; /* Warna merah saat hover */
+}
+
+/* Mengatur ikon dengan teks */
+.navbar-icon-with-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Mengatur profil navbar */
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Mengatur gambar profil */
+.navbar-profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Mengatur nama profil */
+.navbar-profile-name {
+  margin-right: 5px;
+}
+
+/* Mengatur ikon caret */
+.navbar-icon-caret {
+  transition: color 0.3s ease;
+}
+
+.navbar-icon-caret:hover {
+  color: #ff4b5c; /* Warna merah saat hover */
+}
+
+/* Mengatur menu profil */
+.navbar-profile-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar-profile:hover .navbar-profile-menu {
+  display: block;
+}
+
+.navbar-profile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-profile-menu li {
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-profile-menu li:hover {
+  color: #ff4b5c; /* Warna merah saat hover */
+}
+
+/* Mengatur ikon menu untuk layar mobile */
+.navbar-menu-icon {
+  display: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu-icon:hover {
+  color: #ff4b5c; /* Warna merah saat hover */
+}
+
+/* Mengatur menu mobile */
+.navbar-mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  z-index: 999;
+}
+
+.navbar-mobile-menu.open {
+  display: flex;
+}
+
+/* Media query untuk tampilan desktop */
+@media (min-width: 769px) {
+  .navbar-left, .navbar-right {
+    display: flex; /* Tampilkan menu di desktop */
+    align-items: center; /* Pastikan item menu sejajar vertikal */
+  }
+
+  .navbar-menu-container {
+    display: flex; /* Tampilkan menu di desktop */
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .navbar-menu-icon {
+    display: none; /* Sembunyikan ikon menu di desktop */
+  }
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  .navbar-menu, .navbar-right {
+    display: none; /* Sembunyikan menu kiri dan kanan di mobile */
+  }
+
+  .navbar-menu-icon {
+    display: block; /* Tampilkan ikon menu di mobile */
+  }
+}

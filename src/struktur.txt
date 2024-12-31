@@ -1,0 +1,44 @@
+root */
+        */src/
+                 api/
+                    api.js
+                    requests.js
+                 assets/
+                       style/ 
+                            About.css
+                            App.css
+                            Index.css
+                            Banner.css
+                            ContinueWatching.css
+                            DetailMovie.css
+                            Movies.css
+                            Footer.css
+                            Navbar.css
+                            Row.css
+                            TrendingNow.css
+                            TvShows.css
+                       images/
+                             Logo1.png
+                             Logo2.png
+                 components/
+                           Navbar.jsx
+                           Banner.jsx
+                           ContinueWatching.jsx
+                           Movies.jsx
+                           TrendingNow.jsx
+                           Row.jsx
+                           DetailMovie.jsx
+                 
+                 pages/
+                      Home.jsx
+                      About.jsx
+                      TvShows.jsx
+             App.jsx
+             Main.jsx
+             
+      index.html
+      package.json
+      struktur.txt
+      .env
+      .gitignore
+      

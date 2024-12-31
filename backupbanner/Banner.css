@@ -1,0 +1,198 @@
+/* Banner container */
+.banner {
+  position: relative;
+  height: 30vh; /* Tinggi tetap 30vh di semua ukuran layar */
+  width: 100%; /* Lebar 100% agar responsif */
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Posisikan item dengan jarak yang merata */
+  padding: 20px;
+}
+
+/* Konten di dalam banner */
+.banner-contents {
+  position: relative;
+  z-index: 2;
+}
+
+/* Judul film */
+.banner-title {
+  font-size: 2rem; /* Ukuran disesuaikan untuk responsif */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Rating film */
+.banner-rating {
+  font-size: 1.2rem; /* Ukuran disesuaikan untuk responsif */
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column; /* Ubah menjadi kolom untuk menumpuk ulasan dan rating */
+  align-items: flex-start; /* Rata kiri untuk ulasan dan rating */
+}
+
+.banner-rating svg {
+  margin-right: 5px;
+  color: gold;
+}
+
+/* Teks ulasan */
+.banner-review {
+  font-size: 1rem; /* Ukuran disesuaikan untuk responsif */
+  margin-bottom: 5px; /* Tambahkan sedikit jarak antara ulasan dan rating */
+  max-width: 50%; /* Pastikan ulasan tidak melebihi 50% lebar banner */
+  white-space: normal; /* Biarkan teks membungkus ke baris berikutnya */
+  overflow: hidden; /* Sembunyikan teks berlebih */
+  text-overflow: ellipsis; /* Tambahkan elipsis (...) untuk teks berlebih */
+}
+
+/* Star rating */
+.banner-stars {
+  display: flex;
+  align-items: center;
+}
+
+/* Container tombol */
+.banner-buttons {
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Dorong tombol ke bawah banner */
+}
+
+.banner-buttons-left,
+.banner-buttons-right {
+  display: flex;
+  gap: 10px;
+}
+
+.banner-buttons-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* Tombol individu */
+.banner-button {
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 16px 32px; /* Disesuaikan untuk responsif */
+  font-size: 1.2rem; /* Ukuran font lebih besar untuk desktop */
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden; /* Pastikan efek box-shadow tidak meluap */
+  transition: all 0.3s ease; /* Transisi halus untuk efek hover */
+}
+
+.banner-button:hover {
+  border: 1px solid #ff0000; /* Tambahkan border merah saat hover */
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; /* Tambahkan efek neon dengan box-shadow */
+}
+
+/* Info tambahan dalam banner */
+.banner-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+/* Ikon play dalam banner */
+.banner-play-icon {
+  font-size: 2.5rem; /* Ukuran lebih besar */
+}
+
+/* Efek fade di bagian bawah banner */
+.banner-fadeBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+}
+
+/* Penyesuaian responsif menggunakan media query */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 1.5rem; /* Judul lebih kecil di mobile */
+    text-align: left; /* Rata kiri untuk judul di mobile */
+  }
+
+  .banner-rating {
+    font-size: 1rem; /* Rating lebih kecil di mobile */
+    align-items: flex-start; /* Rata kiri untuk rating di mobile */
+    text-align: left; /* Rata kiri untuk teks rating di mobile */
+  }
+
+  .banner-button {
+    padding: 6px 12px; /* Tombol lebih kecil di mobile */
+    font-size: 0.9rem;
+  }
+
+  .banner-play-icon {
+    font-size: 1.5rem; /* Ikon play lebih kecil di mobile */
+  }
+
+  .banner-review {
+    max-width: 100%; /* Pastikan ulasan tidak melebihi 100% lebar */
+    text-align: left; /* Rata kiri untuk ulasan di mobile */
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner-buttons-left,
+  .banner-buttons-right {
+    justify-content: flex-start;
+  }
+
+  .banner-contents {
+    text-align: left; /* Teks di kiri pada mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .banner {
+    height: 30vh; /* Tinggi tetap 30vh di desktop */
+  }
+
+  .banner-contents {
+    padding-top: 10vh; /* Padding lebih besar di atas untuk desktop */
+    max-width: 50%; /* Batasi lebar untuk keterbacaan lebih baik */
+    text-align: left; /* Teks rata kiri pada desktop */
+  }
+
+  .banner-title {
+    font-size: 3rem; /* Judul lebih besar di desktop */
+  }
+
+  .banner-rating {
+    font-size: 1.5rem; /* Rating lebih besar di desktop */
+  }
+
+  .banner-review {
+    font-size: 1.2rem; /* Teks ulasan lebih besar di desktop */
+    max-width: 70%; /* Sesuaikan max-width untuk desktop */
+  }
+
+  .banner-button {
+    padding: 16px 32px; /* Tombol lebih besar di desktop */
+    font-size: 1.2rem; /* Ukuran font lebih besar di desktop */
+  }
+
+  .banner-play-icon {
+    font-size: 2.5rem; /* Ikon play lebih besar di desktop */
+  }
+
+  .banner-buttons {
+    justify-content: space-between; /* Posisikan tombol merata di desktop */
+  }
+}

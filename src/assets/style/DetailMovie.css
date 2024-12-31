@@ -1,0 +1,182 @@
+.detail-card {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  background: #000;
+  position: relative;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column; /* Change to column for mobile view */
+}
+
+.detail-card-left {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.detail-card-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Adjust border-radius for mobile view */
+}
+
+.detail-card-right {
+  width: 100%;
+  background: #000000;
+  border-radius: 0 0 10px 10px; /* Adjust border-radius for mobile view */
+  padding: 20px;
+  color: white;
+}
+
+.detail-card-right h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 30px; /* Adjust font size for mobile view */
+  margin: 0;
+}
+
+.detail-card-right__details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.detail-card-right__details li {
+  display: inline;
+  color: #e3e3e3;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+.detail-card-right__rating__stars {
+  margin: 10px 0;
+}
+
+.rating {
+  border: none;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  display: inline-block;
+  content: "\f005";
+  font-family: FontAwesome;
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
+.detail-card-right__review p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 10px 0;
+  line-height: 20px;
+}
+
+.detail-card-right__review a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #ffda00;
+}
+
+.detail-card-right__button button {
+  color: #ffda00;
+  background: none;
+  border: 2px solid #ffda00;
+  padding: 10px 40px;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.detail-card-right__button button:hover {
+  color: #000;
+  background-color: #ffda00;
+}
+
+.trailer-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trailer-popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+  .detail-card {
+    flex-direction: row; /* Change to row for desktop view */
+    height: 400px;
+  }
+
+  .detail-card-left {
+    width: 40%;
+  }
+
+  .detail-card-left img {
+    border-radius: 10px 0 0 10px; /* Adjust border-radius for desktop view */
+  }
+
+  .detail-card-right {
+    width: 60%;
+    border-radius: 0 10px 10px 0; /* Adjust border-radius for desktop view */
+  }
+
+  .detail-card-right h1 {
+    font-size: 40px; /* Adjust font size for desktop view */
+  }
+}
